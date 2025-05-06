@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Elite Craft</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background:rgba(100, 60, 116, 0.64);
+    }
+
+    header {
+      background-color: #002d40;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+        background: #007BFF;
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      background-color: #004466;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #007aa5;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #004466;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #004466;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #00688b;
+    }
+
+    .contact-options {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .contact-options a {
+      display: inline-block;
+      margin: 10px;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+    }
+
+    .email {
+      background-color: #0072c6;
+    }
+
+    footer {
+      background-color: #002d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links a {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+
+      section {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .logo span {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EC</div>
+    <div class="nav-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Contact Us</h2>
+    <form action="dumbuyasahid821@gmail.com|abubakarrfofanah611@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send via Email</button>
+    </form>
+
+    <div class="contact-options">
+      <h3>Or Reach Us Directly</h3>
+      <a href="https://wa.me/23232830493" class="whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp Chat
+      </a>
+      <a href="dumbuyasahid821@gmail.com|abubakarrfofanah611@gmail.com" class="email">
+        <i class="fas fa-envelope"></i> Email Us
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Elite Craft | Designed to Serve with Excellence</p>
+  </footer>
+
+</body>
+</html>

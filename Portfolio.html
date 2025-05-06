@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Craft Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color:rgba(120, 75, 131, 0.79);
+      color: #333;
+    }
+
+    header {
+      background-color: #004466;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      background: #007BFF;
+      color: white;
+      font-size: 24px;
+      font-weight: 600;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      background-color: #004466;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      right: 0;
+      z-index: 1;
+      border-radius: 6px;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+      color: #004466;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .portfolio-item {
+      background: white;
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding-bottom: 15px;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .portfolio-content {
+      padding: 15px;
+    }
+
+    .portfolio-content h3 {
+      margin: 10px 0;
+      font-size: 20px;
+      color: #222;
+    }
+
+    .portfolio-content p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      background-color: #004466;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .portfolio-item {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">EC</div>
+    <div class="dropdown">
+      <button class="dropbtn">☰ Menu</button>
+      <div class="dropdown-content">
+        <a href="Services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="Form.html">Form</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Our Portfolio</h2>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>Business Website</h3>
+          <p>We developed a fully responsive website for a local fashion brand with online ordering and booking features.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>Architectural Design</h3>
+          <p>Modern 3-bedroom house plan created by our experienced engineers and certified architects.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>Computer Repairs</h3>
+          <p>Resolved motherboard failure and upgraded RAM for a business office with over 10 systems.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>Company Website</h3>
+          <p>Built and deployed a professional site for a company, featuring project listings and their services.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>Office Networking</h3>
+          <p>Installed wired and wireless network solutions for company.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Elite Craft - Excellence in Design, Technology, and Service</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing - Elite Craft</title>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:rgba(133, 61, 148, 0.82);
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background: #007BFF;
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 30px;
+    }
+
+    .pricing-table {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .pricing-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pricing-card h3 {
+      margin-top: 0;
+      color: #9878;
+    }
+
+    .price {
+      font-size: 26px;
+      font-weight: bold;
+      color:rgba(42, 40, 167, 0.81);
+      margin: 15px 0;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .pricing-card ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .pay-btn {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color:rgba(85, 27, 124, 0.97);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .payment-instruction {
+      margin-top: 50px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .payment-instruction h3 {
+      color: #004466;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .pricing-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">EC</div>
+  <nav>
+    <a href="index.html" style="color:white; text-decoration:none;">← Home</a>
+  </nav>
+</header>
+
+<section>
+  <h2>Our Services & Pricing</h2>
+  <div class="pricing-table">
+    <div class="pricing-card">
+      <h3>Website Creation</h3>
+      <p class="price">$500</p>
+      <ul>
+        <li>Custom Design</li>
+        <li>Responsive Layout</li>
+        <li>5 Pages Included</li>
+        <li>5 Days Delivery</li>
+      </ul>
+      <button class="pay-btn" onclick="makePayment('Website Creation', 500)">Pay $500</button>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Mobile App Creation</h3>
+      <p class="price">$600</p>
+      <ul>
+        <li>iOS or Android</li>
+        <li>6 Screens UI</li>
+        <li>API Integration</li>
+        <li>10-14 Days Delivery</li>
+      </ul>
+      <button class="pay-btn" onclick="makePayment('App Creation', 600)">Pay $600</button>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Logo & Branding</h3>
+      <p class="price">$100</p>
+      <ul>
+        <li>3 Logo Options</li>
+        <li>Brand Identity Kit</li>
+        <li>Unlimited Revisions</li>
+        <li>3 Days Delivery</li>
+      </ul>
+      <button class="pay-btn" onclick="makePayment('Logo & Branding', 100)">Pay $100</button>
+    </div>
+
+    <div class="pricing-card">
+      <h3>PC Repair</h3>
+      <p class="price">$80</p>
+      <ul>
+        <li>Diagnostics</li>
+        <li>Software Fixes</li>
+        <li>Performance Boost</li>
+        <li>2 Days Delivery</li>
+      </ul>
+      <button class="pay-btn" onclick="makePayment('PC Repair', 80)">Pay $80</button>
+    </div>
+  </div>
+
+  <div class="payment-instruction">
+    <h3>Need Help with Payment?</h3>
+    <p>You can also pay via:</p>
+    <ul>
+      <li><strong>Orange Money:</strong> <span class="highlight">+232-76-123-456</span></li>
+      <li><strong>Bank Transfer:</strong> <span class="highlight">001122334455 - EcoBank</span></li>
+    </ul>
+    <p>After payment, send confirmation to:</p>
+    <ul>
+      <li><strong>Email:</strong> <span class="highlight">elitecraftsl@gmail.com</span></li>
+      <li><strong>WhatsApp:</strong> <span class="highlight">+232-88-654-321</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Elite Craft. Professional. Reliable. Affordable.</p>
+</footer>
+
+<script>
+function makePayment(service, amount) {
+  FlutterwaveCheckout({
+    public_key: "FLWPUBK_TEST-xxxxxxxxxxxxxxxxxxxxxx", // Replace with your live public key
+    tx_ref: "EC_" + Date.now(),
+    amount: amount,
+    currency: "USD",
+    payment_options: "card,banktransfer,ussd,barter",
+    customer: {
+      email: "client@email.com",
+      phone_number: "23276123456",
+      name: "Elite Client",
+    },
+    callback: function (data) {
+      alert("Payment complete! Reference: " + data.tx_ref);
+      // Optional: send `data` to backend for verification
+    },
+    onclose: function () {
+      console.log("Payment closed");
+    },
+    customizations: {
+      title: "Elite Craft Payment",
+      description: service + " payment",
+      logo: "https://yourdomain.com/logo.png", // Optional: Your logo
+    },
+  });
+}
+</script>
+
+</body>
+</html>
