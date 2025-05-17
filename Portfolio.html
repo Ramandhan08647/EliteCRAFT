@@ -81,6 +81,14 @@
       margin: auto;
     }
 
+    h1.animated-text {
+      font-size: 28px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+      height: 40px;
+    }
+
     h2 {
       text-align: center;
       margin-bottom: 30px;
@@ -162,11 +170,12 @@
   </header>
 
   <section>
+    <h1 class="animated-text" id="vibeText"></h1>
     <h2>Our Portfolio</h2>
     <div class="portfolio-grid">
 
       <div class="portfolio-item">
-        <img src="bweb.jpeg" alt="Business Website" class="portfolio-img">
+        <img src="images/business-website.jpg" alt="Business Website" class="portfolio-img">
         <div class="portfolio-content">
           <h3>Business Website</h3>
           <p>We developed a fully responsive website for a local fashion brand with online ordering and booking features.</p>
@@ -174,7 +183,7 @@
       </div>
 
       <div class="portfolio-item">
-        <img src="plan.jpeg" alt="Architectural Design" class="portfolio-img">
+        <img src="images/house-design.jpg" alt="Architectural Design" class="portfolio-img">
         <div class="portfolio-content">
           <h3>Architectural Design</h3>
           <p>Modern 3-bedroom house plan created by our experienced engineers and certified architects.</p>
@@ -182,7 +191,7 @@
       </div>
 
       <div class="portfolio-item">
-        <img src="repa.jpeg" alt="Computer Repair" class="portfolio-img">
+        <img src="images/computer-repair.jpg" alt="Computer Repair" class="portfolio-img">
         <div class="portfolio-content">
           <h3>Computer Repairs</h3>
           <p>Resolved motherboard failure and upgraded RAM for a business office with over 10 systems.</p>
@@ -190,7 +199,7 @@
       </div>
 
       <div class="portfolio-item">
-        <img src="cweb.jpeg" alt="Company Website" class="portfolio-img">
+        <img src="images/company-site.jpg" alt="Company Website" class="portfolio-img">
         <div class="portfolio-content">
           <h3>Company Website</h3>
           <p>Built and deployed a professional site for a company, featuring project listings and their services.</p>
@@ -198,7 +207,7 @@
       </div>
 
       <div class="portfolio-item">
-        <img src="onet.jpeg" alt="Networking" class="portfolio-img">
+        <img src="images/network-installation.jpg" alt="Networking" class="portfolio-img">
         <div class="portfolio-content">
           <h3>Office Networking</h3>
           <p>Installed wired and wireless network solutions for a small business setup.</p>
@@ -206,10 +215,18 @@
       </div>
 
       <div class="portfolio-item">
-        <img src="erepa.jpeg" alt="Electrical Appliance Repair" class="portfolio-img">
+        <img src="images/electrical-repair.jpg" alt="Electrical Appliance Repair" class="portfolio-img">
         <div class="portfolio-content">
           <h3>Electrical Appliance Repair</h3>
           <p>Fixed faulty fans, rice cookers, and power strips. We also built custom devices from salvaged parts to restore functionality.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="images/plan.jpeg" alt="House Plan" class="portfolio-img">
+        <div class="portfolio-content">
+          <h3>House Blueprint</h3>
+          <p>Detailed and professional architectural blueprint design tailored for residential perfection.</p>
         </div>
       </div>
 
@@ -217,4 +234,23 @@
   </section>
 
   <footer>
-    <p>© 2025 Elite Craft – Excellence in Design, Technology, and Service</
+    <p>© 2025 Elite Craft – Excellence in Design, Technology, and Service</p>
+  </footer>
+
+  <script>
+    const text = "We Build Solutions That Last!";
+    let index = 0;
+    const speed = 100; // typing speed in ms
+
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("vibeText").textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
