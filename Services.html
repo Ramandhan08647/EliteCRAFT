@@ -89,31 +89,8 @@
       text-align: center;
       color: #004466;
       margin-bottom: 20px;
-      font-size: 32px;
-    }
-
-    .animated-text {
-      display: inline-block;
-      font-weight: bold;
-      font-size: 24px;
-      text-align: center;
-      width: 100%;
-      margin-bottom: 20px;
-      min-height: 40px;
-    }
-
-    .animated-letter {
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(-20px);
-      animation: animateText 0.7s forwards;
-    }
-
-    @keyframes animateText {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      font-size: 36px;
+      line-height: 1.3;
     }
 
     .intro {
@@ -177,6 +154,41 @@
         width: 90%;
       }
     }
+
+    /* Fire-rock animated heading */
+    .animated-heading span {
+      opacity: 0;
+      display: inline-block;
+      animation: fireLetters 1s forwards;
+    }
+
+    .animated-heading span:nth-child(1) { animation-delay: 0s; color: #ff6a00; }
+    .animated-heading span:nth-child(2) { animation-delay: 0.05s; color: #ffae00; }
+    .animated-heading span:nth-child(3) { animation-delay: 0.1s; color: #ffd000; }
+    .animated-heading span:nth-child(4) { animation-delay: 0.15s; color: #ff6a00; }
+    .animated-heading span:nth-child(5) { animation-delay: 0.2s; color: #ff1100; }
+    .animated-heading span:nth-child(6) { animation-delay: 0.25s; color: #ff6a00; }
+    .animated-heading span:nth-child(7) { animation-delay: 0.3s; color: #ffaa00; }
+    .animated-heading span:nth-child(8) { animation-delay: 0.35s; color: #ff1100; }
+    .animated-heading span:nth-child(9) { animation-delay: 0.4s; color: #ffd000; }
+    .animated-heading span:nth-child(10) { animation-delay: 0.45s; color: #ff6a00; }
+    .animated-heading span:nth-child(11) { animation-delay: 0.5s; color: #ffaa00; }
+    .animated-heading span:nth-child(12) { animation-delay: 0.55s; color: #ff1100; }
+    .animated-heading span:nth-child(13) { animation-delay: 0.6s; color: #ffd000; }
+    .animated-heading span:nth-child(14) { animation-delay: 0.65s; color: #ff6a00; }
+    .animated-heading span:nth-child(15) { animation-delay: 0.7s; color: #ff1100; }
+    .animated-heading span:nth-child(16) { animation-delay: 0.75s; color: #ffaa00; }
+    .animated-heading span:nth-child(17) { animation-delay: 0.8s; color: #ffd000; }
+    .animated-heading span:nth-child(18) { animation-delay: 0.85s; color: #ff6a00; }
+    .animated-heading span:nth-child(19) { animation-delay: 0.9s; color: #ffae00; }
+    .animated-heading span:nth-child(20) { animation-delay: 0.95s; color: #ff1100; }
+
+    @keyframes fireLetters {
+      to {
+        opacity: 1;
+        transform: translateY(-4px);
+      }
+    }
   </style>
 </head>
 <body>
@@ -195,30 +207,55 @@
   </header>
 
   <section>
-    <h1 id="animated-title"></h1>
+    <h1 class="animated-heading">
+      <!-- Letters for animation -->
+      <span>W</span><span>h</span><span>a</span><span>t</span> <span>W</span><span>e</span> <span>D</span><span>o</span> <span>a</span><span>t</span> <span>E</span><span>l</span><span>i</span><span>t</span><span>e</span> <span>C</span><span>r</span><span>a</span><span>f</span><span>t</span>
+    </h1>
+
     <p class="intro">At Elite Craft, we offer a unique blend of creativity, precision, and innovation. Whether you're a business owner, student, homeowner, or tech enthusiast, our team delivers results tailored to your needs. Here's a closer look at our services:</p>
 
     <div class="service-grid">
-      <!-- Service cards remain unchanged -->
+      <!-- service cards (unchanged) -->
+      <div class="service-card">
+        <i class="fas fa-tools"></i>
+        <h3>Technical Support</h3>
+        <p>We provide hardware and software repairs, system optimization, and device troubleshooting for PCs, mobile phones, and office equipment.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-drafting-compass"></i>
+        <h3>Architectural Design</h3>
+        <p>Our certified team designs modern homes, offices, and interior layouts using AutoCAD and 3D rendering tools with stunning results.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Web & App Development</h3>
+        <p>We build high-performance websites and mobile applications for businesses and startups using modern technologies and frameworks.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>ICT Training</h3>
+        <p>Empowering the next generation with hands-on training in coding, graphic design, Microsoft Office, and digital literacy programs.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Business Consulting</h3>
+        <p>From branding to strategy, we guide startups and entrepreneurs toward growth with research-backed advice and digital planning tools.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-user-check"></i>
+        <h3>Staffing & Recruitment</h3>
+        <p>We help organizations find top talent by sourcing, training, and recommending the best professionals in ICT and business roles.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-plug"></i>
+        <h3>Electrical Appliance Repair</h3>
+        <p>We repair faulty electrical appliances and creatively repurpose scrap electronics into functional devices.</p>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>© 2025 Elite Craft – Empowering Businesses Through Innovation</p>
   </footer>
-
-  <script>
-    const title = "What We Do at Elite Craft";
-    const container = document.getElementById("animated-title");
-
-    title.split("").forEach((char, index) => {
-      const span = document.createElement("span");
-      span.classList.add("animated-letter");
-      span.style.animationDelay = `${index * 0.1}s`;
-      span.style.color = `hsl(${index * 25}, 80%, 60%)`;
-      span.textContent = char;
-      container.appendChild(span);
-    });
-  </script>
 </body>
-</html>s
+</html>
